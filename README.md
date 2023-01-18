@@ -1,4 +1,4 @@
-# jocelyn-coding-portfolio
+# Jocelyn's Coding Portfolio
 
 ## Description
 
@@ -6,6 +6,7 @@ Jocelyn's coding portfolio showcases the skills and talents she offers to potent
 
 ## Deployed Application
 
+https://jjocelynn.github.io/jocelyn-coding-portfolio/
 
 ## Usage
 
@@ -36,3 +37,6 @@ Wireframe template by Rishabh Singh on Figma: https://www.figma.com/community/fi
 
 ## License
 Please refer to the LICENSE in the repo.
+
+## Wireframe Mockup
+![contact section screenshot](./assets/images/Wireframing.png)

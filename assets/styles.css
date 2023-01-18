@@ -1,3 +1,4 @@
+/* global accessibility: assigning colors to variables */
 :root {
     --background: #161616;
     --secondary: #f5ee84;
@@ -5,36 +6,39 @@
     --text: #fffdd0;
 }
 
+/* body: background color, fonts, and margin to whole page */
 body {
-    /*setting the background color to --background */
     background-color: var(--background);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 50px;
 }
 
-/*header */
-header,
-.contact a {
-    /* changing all text in the header and links within the contact id to --tertiary color*/
+/* all links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/***** header section *****/
+header {
     color: var(--tertiary);
     display: flex;
     justify-content: space-between;
-    /*leaves text in respective corners*/
 }
 
+/* title */
 h1 {
     font-size: 40px;
     margin: 0px;
     margin-left: 2%;
 }
 
+/* navigation */
 nav {
     text-align: right;
     margin-right: 2%;
-}
-
-ul {
-    padding-bottom: 130px;
+    margin-bottom: 8%;
 }
 
 li {
@@ -43,31 +47,20 @@ li {
     font-size: 18px;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
 
-/*main section*/
-/*intro section */
+/****** main body ******/
+/*** intro section ***/
 #intro-section {
     display: flex;
     justify-content: space-around;
     margin-bottom: 200px;
 }
 
-/*intro right: profile picture */
-#profile-pic {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-}
-
 /*intro left: text and button */
 .intro {
     color: var(--text);
     font-size: 28px;
-    margin-left: 5px; /* visually align text*/
+    margin-left: 5px;
     line-height: 0;
 }
 
@@ -87,12 +80,18 @@ button {
     margin-top: 30px;
 }
 
-#intro-section article{
-    padding-top: 50px
+#intro-section article {
+    padding-top: 50px;
 }
 
+/*intro right: profile picture */
+#profile-pic {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
 
-/* about, work, and contact section */
+/*** about, work, and contact section ***/
 #about,
 #work,
 #contact {
@@ -109,17 +108,13 @@ p {
     font-size: 24px;
 }
 
-/* work section */
+/*** work section ***/
 #main-article,
 .sub-article {
     position: relative;
     margin-bottom: 3%;
     border: 7px solid var(--secondary);
     transition: all 0.2s ease-in-out;
-}
-
-.sub-article{
-    margin-bottom: 6%;
 }
 
 #main-img {
@@ -129,15 +124,20 @@ p {
     object-fit: cover;
 }
 
+/* sub work */
 #sub-work {
     display: grid;
     grid-template-columns: 48.5% 48.5%;
     column-gap: 3%;
 }
 
+.sub-article {
+    margin-bottom: 6%;
+}
+
 .sub-img {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 /* work titles */
@@ -149,6 +149,7 @@ p {
     bottom: -25px;
 }
 
+/* hover over work articles: make glow and lower image opacity */
 #work article:hover {
     border: 10px solid var(--secondary);
     box-shadow: 0px 0px 20px 5px var(--tertiary);
@@ -158,7 +159,8 @@ p {
     opacity: 50%;
 }
 
-/*Contact section */
+
+/*** Contact section ***/
 #contact {
     display: flex;
     justify-content: space-between;
@@ -171,57 +173,66 @@ p {
     font-size: 18px;
 }
 
-/* Footer Section */
+/***** Footer Section *****/
 footer {
     text-align: center;
 }
 
-@media screen and (max-width: 1007px){
-    header{
+/***** media screen: screen sizes for accessibility *****/
+@media screen and (max-width: 1007px) {
+
+    /* header */
+    header {
         display: block;
     }
-    
-    header ul{
+
+    header ul {
         text-align: center;
         margin: auto;
         padding: 20px 0px 50px 0px;
     }
 
-    header ul li{
+    header ul li {
         display: block;
         padding: 10px 0px 10px 0px;
         margin: auto;
         border-bottom: 1px solid var(--tertiary);
         transition: all 1s ease-in-out;
     }
-    
+
+    /* intro section */
     #intro-section {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         text-align: center;
-        margin:0;
+        margin: 0;
     }
 
-    #intro-section article, #profile-pic{
+    #intro-section article,
+    #profile-pic {
         margin-bottom: 100px;
         transition: all 1s ease-in-out;
     }
 
+    /* work section */
     #sub-work {
         display: flex;
         flex-wrap: wrap;
         transition: all 1s ease-in-out;
     }
 
-    #contact, #contact a {
+    /* contact section */
+    #contact,
+    #contact a {
         display: block;
-        text-align: left
-     }
+        text-align: left;
+    }
 }
 
-@media screen and (max-width: 640px){
-    
-    #intro-section{
+@media screen and (max-width: 640px) {
+
+    /* intro section 75% smaller to fit on page comfortably */
+    #intro-section {
         transform: scale(75%);
         transition: all 1s ease-in-out;
     }
